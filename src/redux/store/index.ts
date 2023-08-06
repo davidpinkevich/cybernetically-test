@@ -1,8 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import stocks from "../slices/stocks";
+import symbols from "../slices/symbolsSlice";
+import stocks from "../slices/stocksSlice";
 
 const store = configureStore({
-  reducer: { stocks },
+  reducer: { symbols, stocks },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
   devTools: process.env.NODE_ENV !== "production",
 });
