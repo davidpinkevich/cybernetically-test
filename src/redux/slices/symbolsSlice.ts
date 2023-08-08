@@ -5,7 +5,7 @@ import { IInitialSymbols } from "../../types";
 const initialState: IInitialSymbols = {
   nameSymbols: [],
   amountSymbols: 0,
-  loadSymbols: "start",
+  loadSymbols: null,
 };
 
 export const getNameSymbols = createAsyncThunk("symbols/getData", async () => {
@@ -13,7 +13,7 @@ export const getNameSymbols = createAsyncThunk("symbols/getData", async () => {
     `${URL.BASE_URL}stable/ref-data/symbols?token=${URL.API_KEY}`
   );
   const data: Array<{ symbol: string }> = await response.json();
-  return data.map((item) => item.symbol);
+  return data.map((item) => item.symbol).filter((x) => !x.endsWith("+"));
 });
 
 const stockSlice = createSlice({
@@ -33,6 +33,6 @@ const stockSlice = createSlice({
   },
 });
 
-const { actions, reducer } = stockSlice;
+const { reducer } = stockSlice;
 
 export default reducer;
