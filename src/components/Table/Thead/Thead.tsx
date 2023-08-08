@@ -1,22 +1,13 @@
 import { QUOTES_NAMES } from "../../../constants";
 import { v4 } from "uuid";
+import { styles } from "./styles";
 
 export const Thead = () => {
   return (
     <thead>
       <tr>
         {QUOTES_NAMES.map((item) => (
-          <th
-            key={v4()}
-            style={{
-              color: "white",
-              backgroundColor: "#7d8788",
-              fontSize: 18,
-              verticalAlign: "top",
-              textAlign: "center",
-              textShadow: "0px 2px 2px #000000",
-            }}
-          >
+          <th key={v4()} style={{ ...styles }}>
             {item}
           </th>
         ))}
