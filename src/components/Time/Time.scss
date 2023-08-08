@@ -1,0 +1,16 @@
+.time {
+  display: flex;
+  gap: 30px;
+  font-size: 18px;
+  text-shadow: 0px 2px 2px black;
+
+  & span {
+    font-weight: 700;
+  }
+  &__current {
+    color: gold;
+  }
+  &__town {
+    color: white;
+  }
+}
