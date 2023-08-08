@@ -1,0 +1,79 @@
+.main__button {
+  width: 600px;
+  position: fixed;
+  left: calc(50% - 300px);
+  top: 30%;
+  padding: 45px;
+  background-color: rgba(48, 63, 63, 0.6);
+  border-radius: 12px;
+  flex-grow: 1;
+  transition: all 0.6s;
+
+  animation: hiddenGame 1.5s ease-in-out, rotateButton 3s infinite;
+
+  &-link-wrapper {
+    display: flex;
+    gap: 15px;
+  }
+
+  &-link {
+    font-size: 32px;
+    color: white;
+    background-color: inherit;
+    text-shadow: 0px 2px 2px black;
+  }
+
+  &-schedule {
+    opacity: 0.5;
+    width: 100px;
+    height: 100px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: inset 0px 0px 16px 3px black;
+    background-color: rgba(48, 63, 63, 0.8);
+  }
+}
+
+@keyframes hiddenGame {
+  0% {
+    top: -100%;
+  }
+  50% {
+    top: 10%;
+  }
+  100% {
+    top: 30%;
+  }
+}
+
+@keyframes rotateButton {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.01) rotate(-0.5deg);
+  }
+  50% {
+    transform: scale(1.02) rotate(0deg);
+  }
+  75% {
+    transform: scale(1.01) rotate(0.5deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes pulseButton {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

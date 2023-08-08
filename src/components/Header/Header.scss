@@ -1,0 +1,54 @@
+.stocks__header {
+  background-color: rgba(48, 63, 63, 0.6);
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+  z-index: 2;
+  width: 100%;
+  height: 70px;
+  top: 0;
+  right: 0;
+  animation: headerHidden 1.5s;
+
+  &-logo {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    animation: pulseLogo 1.5s infinite;
+    & span {
+      color: white;
+      font-size: 28px;
+    }
+  }
+
+  &-img {
+    width: 35px;
+    height: 40px;
+  }
+}
+
+@keyframes pulseLogo {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes headerHidden {
+  0% {
+    top: -100%;
+  }
+  50% {
+    top: -50%;
+  }
+  100% {
+    top: 0;
+  }
+}
