@@ -6,9 +6,9 @@ This app needs an API key, you can get it from https://iexcloud.io/
 
 ### View:
 
-![ain](https://github.com/davidpinkevich/cybernetically-test/assets/112433039/4546e9cc-7fd2-46ff-8870-d646a3aa6c06)
-![stocks](https://github.com/davidpinkevich/cybernetically-test/assets/112433039/460fc135-b49f-4b4f-a220-333d6d45bbf8)
+Main page: https://drive.google.com/file/d/15B33pqm7Pd4a8_4Kne6_nSD6XR6Hr1m2/view?usp=drive_link
 
+Stocks page: https://drive.google.com/file/d/1h9MBJPiUuD_QoR8DAtOKYlzVk1HsKCKj/view?usp=drive_link
 
 ### Start Application:
 
